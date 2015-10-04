@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Michael Hergenrader</title>
+	<meta name="description" content="Michael (Mike) Hergenrader is a Technical Program Manager for Google's Search Quality and Knowledge Graph capacity, with personal long-term research interests in neural model architectures and their applications to natural language tasks.">
+	<meta name="author" content="Michael Hergenrader">
+	<meta name="keywords" content="Michael Mike Hergenrader Computer Science USC CoAbode Microsoft Bing Ads Annotations Decorations Boost Multiplier A/B Testing Merchant Ratings Long Ad Titles Favicon Local Dynamic Twilight Legion TI-89 ticalc Language Suite">
+	
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<style>
+      footer {
+		text-align: center;
+	  }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+		<script src="../assets/js/html5shiv.js"></script>
+	<![endif]-->
+	
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			<a class="brand" href="index.html">Mike Hergenrader</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li><a href="index.html">About</a></li>
+					<li><a href="uploads/resume.pdf">Resume (PDF)</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li class="active"><a href="#">Projects</a></li>
+					<li><a href="personal.html">Personal</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+			<h1>Notable Projects</h1>
+
+			<ul>
+				<li><a href="#microsoft">Projects at Microsoft</a></li>
+				<li><a href="#coabode">CoAbode Time Dollar Network</a></li>
+				<li><a href="#twilightlegion">Twilight Legion</a></li>
+				<li><a href="#languagesuite">Language Suite</a></li>				
+			</ul>
+			
+			<hr>
+
+			<h2><a id="microsoft">Projects at Microsoft (Bing Ads)</a></h2>
+
+			<h3>Ad Annotations</h3>
+			
+			<p>Ad <em>decorations</em> are components of a search ad that provide more information and visual content than the ad's basic title, description, and display URL alone. The information behind these decorations can be provided by advertisers themselves (called <em>extensions</em>) or provided by the publisher on behalf of the advertiser (called <em>annotations</em>). On the whole, decorations have been shown to sustainably increase the click-through rate of ads, as they create a more refined ad appearance and provide useful information about the merchant to users.</p>
+			
+			<p>While I worked in Bing Ads, under the "Relevance and Revenue" division, one of my primary functions at was to drive the end-to-end creation, experimentation, and shipping of new annotations that would be useful to advertisers and users. The benefits of annotations were manifold:</p>
+			<ul>
+				<li>User clicks on annotation links themselves were of no cost to the advertiser</li>
+				<li>Advertisers did not need to provide any extra effort to enable annotations</li>
+				<li>Annotations greatly increased the click-through rate of the ad itself to the landing page while using little extra screen real estate</li>
+				<li>The increased click-through rate from annotations increased revenue for publishers in the best possible way (the alternative being showing more ad impressions, which could annoy users)</li>
+				<li>Their implementation sat at the end of the backend stack, promoting agile development and experimentation.</li>
+			</ul>
+			
+			<p>The last piece was particularly significant because unlike extensions, which contain data provided by the advertiser that must be plumbed through the entire Bing Ads online platform, annotations are arbitrated and appended to the ad as "late binding" features. This provided opportunities for rapid and iterative development and experimentation, since the upstream dependencies were minimal.</p>
+			
+			<p>Outside of shipping individual new annotations, I drove the broader ecosystem and fit of these products in the Bing Ads marketplace, leading a wide range of activities:</p>
+			
+			<ul>
+				<li>I drove the opt-out infrastructure with sales, business development, customer support, and development teams to ensure that advertisers who thought annotations were not optimal for their ads would not have them shown. This was particularly important for pharmaceutical and banking industries, under regulations that stipulated all new ad changes must be approved first.</li>
+				<li>I met with UX teams to try different treatments of locations and colors on the ads during testing, leading a weekly experimentation forum to evaluate current traffic reactions.</li>
+				<li>As the number of available annotations grew, I drove the design for the arbitration module that determines the optimal ones to be displayed, involving a significant amount of A/B testing. I also led the design of the pipeline that feeds back this module's decisions to click prediction and ranking models.</li>
+				<li>I worked with external data providers and business teams to acquire new data for several annotations.</li>
+				<li>I worked with members of Bing and Yahoo! search teams to present these new annotations for experimentation and shipping, tailoring features as needed across different publishers.</li>
+				<li>And as one of my proudest achievements in annotation development, I bootstrapped an international team with new groups in Beijing and Bangalore to expand annotation shipments to non-North American and languages. From there, I ramped up these teams to start developing their own annotations to try out in the en-us market. From our combined learnings, we developed an annotations framework with the goal to allow anyone in Bing Ads to build their own new annotation in under two weeks.</p>
+			</ul>
+			
+			<p>As the lead Program Manager for annotations, I directly led the design, development, A/B testing, and shipment of:</p>
+			<ul>
+				<li><strong>Long Ad Titles</strong>: moves the description or display URL into the title line</li>
+				<li><strong>Local Long Ad Titles</strong>: obtains user's high-level (metro area) location X and appends the text "near X" to the title if a physical merchant location is found within a certain distance</li>
+				<li><strong>Merchant Ratings</strong>: provides ratings for a business shown as a star rating on the ad. There is even a <a href="https://search.yahoo.com/reviews?p=boots&fp=1&ei=UTF-8&mrdomain=dsw.com&fr=yfp-t-901">second page</a> with more details!</li>
+				<li><strong>Favicon</strong>: shows a merchant site's favicon on their ad</li>
+				<li><strong>Hit Highlighting improvements</strong>: added support for synonyms, misspellings, and other morphological similarities between an ad and the query</li>
+				<li><strong>"Dynamic Ads"</strong>: appends special phrases from an advertiser's landing page to the title</li>
+			</ul>
+			
+			<p>And after bootstrapping the international annotations team, I oversaw and consulted on the development, A/B testing, and shipment of these annotations:</p>
+			<ul>
+				<li><strong>Twitter</strong>: shows the number of Twitter followers for a merchant</li>
+				<li><strong>"Smart" annotations</strong>: shows product categories, brands, and other important facets from a merchant's landing page</li>
+				<li><strong>Dynamic sitelinks</strong>: provides more ad links to pieces of advertiser's landing page. These appear when the advertiser has not provided their own sitelinks (an extension).</li>
+				<li><strong>Top ad</strong>: for high-engagement ads, the number of visits will be shown</li>
+			</ul>
+			
+			<p>The annotations framework has since provided the basis for even more shipped annotations! They can be seen in detail at the <a href="http://help.bingads.microsoft.com/#apex/3/en/51127/1">advertiser support page</a> or on product search queries on Bing/Yahoo! in multiple markets! <a href="http://www.bing.com/search?q=flowers">Here</a> is one example showing many of my annotations on Bing.</p> 
+						
+			<h3>Personalized p(click) Boost Multiplier</h3>
+			
+			<p>Apart from annotations, I also drove the design for, A/B tested, and shipped a boost multiplier (based on <a href="http://users.cis.fiu.edu/~lzhen001/activities/KDD_USB_key_2010/workshops/W08%20ADKDD10/6.pdf">this paper</a>) applied to the p(click) score (the machine-learned probability of a user clicking on the ad) of each ad served.</p>
+			
+			<p>This multiplier, dubbed the <em>user click propensity</em>, leverages the user's long-term (previous 28 days) and short-term (last 24 hour session) ad click history to adjust the number of ads shown at the top of the page over time. For users that tend not to click on ads, the "mainline" of ads (those shown above search results, usually 0-4) would be used more efficiently, as more would be pushed to the side and cost the advertiser less for clicks. For ad click-heavy users, the mainline slate would gradually include more ads over time.</p>
+			
+			<p>The user click propensity multiplier used a form of the stochastic gradient boosted decision tree learning algorithm to train, using features like what position each ad was in, semantic ad and organic search result features, similarity of ad texts to the query, and others.</p>
+			
+			<p>This project further promoted my interest in machine learning that developed during my undergraduate research, and I learned a lot not only from development of this multiplier model but also from interacting with the Click Prediction teams, digging deep into the Neural Network and Logistic Regression models developed to model general user click behavior on ads. This click multiplier helped kick-start a larger organizational effort towards personalization, and I helped refine the privacy review process after development of this model.</p>
+
+			<h3>Scaling up ads A/B testing infrastructure</h3>
+			
+			<p>My other major contribution to Bing Ads was the scaling up of its A/B testing platform through expanded parallelization of experiments, based on <a href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36500.pdf">this paper</a>. During my time in the Relevance and Revenue team, I became a go-to expert in A/B testing and drove the expansion of its infrastructure, boosting the number of possible experiments for ads by 10x through this effort! With the available experiment space greatly increased, teams could redirect larger amounts of traffic for their features, improving their tests' statistical power.</p>
+			
+			<p>This new infrastructure involved overlapping, independent experimentation layers and improved tooling to detect experimental conflicts and provide guidance around confounding. In this endeavor, I led a very large team of marketplace algorithms, infrastructure, tooling, logging, and front-end teams, leveraging the annotations I had developed as the first guinea pigs for testing, since they were independent from upstream pieces of the stack.</p>
+			
+			<p>Due to the complexity and scale of this change, I frequently conducted talks for various divisions in Bing Ads, advocating for the importance of this new paradigm, the experimental implications, and what different areas could expect.</p>
+
+			<hr>
+
+			<h2><a id="coabode">CoAbode Time-Dollar Network</a></h2>
+
+			<h3>Summary</h3>
+			<p>For my Computer Science Capstone Project at USC, I led a team of ten students to develop a "time-dollar" social network prototype for <a href="http://www.coabode.com">CoAbode</a>, a non-profit organization that provides resources and support for single mothers. This network allowed single mothers in the same geographical area to provide and receive services from each other in exchange for "time dollars." For example, if a single mother did not have the physical ability or time to do a task, she could request that it be done for her by other single mothers in the network, rewarding the latter with time dollars that she could spend to make her own requests. A high-level view can be seen on our <a href="uploads/CoAbodePosterFinal.pdf">poster</a>.</p>
+
+			<h3>Technology &amp; Contributions</h3>
+			<p>We developed this site using Ruby on Rails, PostgreSQL, jQuery, Bootstrap, and Amazon S3 (for file uploads), leveraging Heroku to house our prototype.</p>
+			
+			<p>My contributions were extensive, both technically and in driving the completion of the project. On the technical side, I developed the entire AJAX-enabled profile workflow (#1 on poster), enabling quick and detailed profile setup for new members. In addition, I also developed the entire administrative suite for CoAbode leaders and the transactions workflow that enabled members to track their tasks, completions, and rewards/debits.</p>
+			
+			<p>Beyond the feature contributions, I conducted the product management, leading the client meetings with the co-founders of CoAbode, driving the design and testing, and tracking tasks and milestones. I also applied my strong teaching abilities, helping a struggling teammate outside of team meetings to better understand the Rails and jQuery frameworks. From this interaction, my teammate then went on to design and implement a critical tagging feature, used for searching for and labeling tasks and profiles.</p>
+			
+			<h3>Awards</h3>
+			<p>At the conclusion of the course, all projects were presented at the <a href="http://viterbi.usc.edu/news/news/2012/capstone-projects-show.htm">annual KIUEL Senior Design Expo</a>. During this event, the project was demonstrated to Expo judges and general student and faculty visitors alike. Our project was officially judged 3rd out of 12 diverse engineering projects in the Expo, and we also won the <a href="http://viterbi.usc.edu/students/undergrad/involvement/kiuel/cross-disciplinary/senior-design-expo-2012.htm">"Most Popular"/"Fan Favorite"</a> project award by a large margin.</p>
+
+			<hr>
+
+			<h2><a id="twilightlegion">Twilight Legion</a></h2>
+
+			<h3>Features</h3>
+			<p>As one of my first major programming projects, I developed a four-level grayscale game over five years for the TI-89 series of graphing calculators in C and 68k Assembly. This game is in the platform arcade/fighting genre, modeled after the <a href="https://en.wikipedia.org/wiki/Super_Smash_Bros.">Super Smash Bros.</a> franchise. It contains 4 modes of play, 24 playable characters, 26 unique levels, 31 unique episodes, a 10-stage classic mode with Race to the Finish! mini-games, 10 invitational tournaments, 26 items, 4 difficulty levels, custom designed menus and fonts, and a full scrolling credits screen! All of this, including the rich graphics designed by me and/or modified from public domain sources, is contained in under 280 KiB of disk space! Overall, the features of this program surpass those of the vast majority of games for the TI-89 series of calculators.</p>
+			
+			<h3>Challenges, Results</h3>
+			<p>The salient engineering challenges unique to this game were developing the proper physics for the game to approximate those of Super Smash Bros., defining the best decisions for the AI and boss players, redirecting interrupts for custom features (like pausing via the ON button, using a timer, and adjusting screen contrast automatically), and developing the link-up play between two calculators (the last one is still in casual progress).</p>
+			
+			<p>In addition, the TI-89 operating system only allows executable blocks under 64 KiB to be loaded in memory. While most programs fit easily within one memory block, given the large amount of code and graphics to power my game, I needed to take special steps of RLE compression for graphics and creation of separate DLL's for different data and executable files, splitting up my original 280 KiB executable. The latter workaround allows all blocks of the program to be in memory at once, with cross-block reads taking place between code and graphics.</p>
+			
+			<p>Overall, from developing this game, I achieved a mastery of C and Assembly Language, greatly helping me in low-level courses like Operating Systems at USC. In addition, the size restrictions imposed by the compiler and TI operating system forced me to do a lot of custom code optimizations and memory tricks and to learn a lot about the underlying hardware in order to add custom features. This knowledge I have carried forward into hardware-focused classes and other hobby development on Arduino chips. Finally, from an artistic perspective, I learned just how much detail can still be packed into four-level grayscale 32x32 pixel (or smaller) sprites!</p>
+
+			<h3>Screenshots</h3>
+			<div id="tl-screenshots">
+				<img src="uploads/screenshots/bosslevel.jpg" alt="Master and Crazy Hand">
+				<img src="uploads/screenshots/charselectscreenfinal.gif" alt="Character Select menu">
+				<img src="uploads/screenshots/classicfight.gif" alt="Character Select and Fight">
+				<img src="uploads/screenshots/corneriafight.gif" alt="Corneria level fight">
+				<img src="uploads/screenshots/episode1.gif" alt="Episode mode fight: 1">
+				<img src="uploads/screenshots/episode2.gif" alt="Episode mode fight: 2">
+				<img src="uploads/screenshots/gamecomplete.jpg" alt="Scores after a fight">
+				<img src="uploads/screenshots/icemountainfight.gif" alt="Moving level fight">
+				<img src="uploads/screenshots/newyoshisislandfight.gif" alt="Yoshis Island fight">
+				<img src="uploads/screenshots/realbossbattle.gif" alt="Boss battle with Master Hand">
+				<img src="uploads/screenshots/realvsscr.gif" alt="Battle preview screen">
+				<img src="uploads/screenshots/tourny.gif" alt="Tournament mode">
+			</div>
+
+			<h3>See the source/download</h3>
+			<ul>
+				<li><a href="http://www.ticalc.org/archives/files/fileinfo/465/46558.html">View on ticalc.org</a> (main TI programming community)</li>
+				<li><a href="https://github.com/mhergenrader/twilightlegion">View on github</a></li>
+			</ul>
+
+			<hr>
+
+			<h2><a id="languagesuite">Language Suite</a></h2>
+
+			<h3>Summary</h3>
+			<p>Language Suite is a desktop application written in Java and the Swing GUI library that facilitates learning foreign languages. It includes two main modules: a notecard review module and a conjugation practice module. These modules allow different types of review: untimed practice and graded timed "test" modes, as well as the ability for the user to create their own notecards and conjugated verbs for review.</p>
+
+			<p>The original motivations for this application were two-fold:</p>
+			<ul>
+				<li>A personal desire to continually practice vocabulary and conjugations in various languages. Sites like conjuguemos.com existed but had limited sets of verbs (and very few notecards) that were not customizable and costed non-trivial fees for broader use by schools.</li>
+				<li>The ability to practice anywhere without an internet connection. While a web application was also considered for implementation, the full offline capability of a desktop app allowed greater portability without needing to check answers against files on a server (or load them on the client). Perhaps future implementations could be on the web or mobile, taking advantage of the more mature offline frameworks and device capabilities.</li>
+			</ul>
+			
+			<h3>Interesting Features</h3>
+
+			<h4>Notecard Module</h4>
+
+			<p>A crucial piece of any foreign language learning is understanding vocabulary, both at the word and phrase levels. To this end, the notecard module allows for digital practice of word/phrase review concepts, either between languages or for words and their definitions/usages in a single language.<p>
+
+			<p>What is <strong>unique</strong> about this application is that it provides functionality of both two-sided and three-sided notecards, the latter of which is less intuitive for easy vocabulary learning on paper.</p>
+			<p>The two-sided notecards are standard, but three-sided cards allow for multiple different pieces to be reviewed for one concept. For example, learning target languages containing glyphs, radicals, or characters that do not have directly readable phonetic mappings (like Chinese) necessitates learning the pronunciation, character, and source language meaning. On the Chinese example, starting from English, one side could represent the pinyin (Anglicized pronunciation of the character or phrase), another the character or phrase itself, and the final side the English meaning(s).</p>
+			<p>And during notecard review, in addition to the simple "flipping" interaction of two-sided notecards, three-sided notecards can be "rotated" across the three sides. This allows users to "flip" to just the sides of importance to them at the time (or in the case of textual entry, they can just provide their answer against one of the hidden sides). For example, if a user was less interested in the English meaning(s) and just wanted to practice the pronunciation and character representation in Chinese, they could view or test against only those two sides. Thus, the three-sided notecard is a convenient and rich superset of the classic two-sided notecard. Each deck allows for any mix of two-sided and three-sided notecards, allowing words or phrases that require more information to expand to the third side, while keeping the standard format for more straightforward concepts.</p>
+
+			<h4>Conjugated Verbs Module</h4>
+
+			<p>An important piece of learning morphologically rich languages, the most common being Romance Languages, is understanding the various verb inflections for different subject pronouns. The conjugated verbs module, during untimed or timed review modes, will cycle through a "deck" of different verbs and their possible conjugations. The user is presented with the verb infinitive (the base form of the verb, not inflected) and a subject pronoun, from which the user must enter the correct inflection. When the user submits his/her answer, the application will announce whether the user is correct or not before moving on to the next verb-pronoun pair.</p>
+
+			<p>Before practice, a user may view the possible choices of infinitives, subject pronouns, and verb conjugation decks to select subsets or mix and match as they so choose. This allows for more focused practice on specific verbs (like "irregulars") or a more diverse review when selecting multiple review decks.</p>
+
+			<h4>Editors</h4>
+
+			<p>Both the notecard and conjugated verb modules have the ability for users to add decks for their own practice of nearly any language.</p>
+
+			<p>At the highest level, users can add new language objects to contain such notecard or conjugated verb practice decks. For conjugated verb practice, users can add custom subjects or pronouns that will appear in verb practice against their provided infinitives.</p>
+
+			<p>In the notecard editor, users can create both two-sided and three-sided notecards for practice, supplying their own titles and metadata for the decks and cards. Users can also rotate the card deck sides or individual cards for more detailed customization. For example, if the user desires one side to be the designated as as the new "front," this can easily be changed on a per-card or per-deck level.</p>
+
+			<p>In the conjugated verb editor, users specify infinitives and the proper inflections for either the entire set of subject pronouns or some subset. The latter case is useful if the language created has too broad a set of pronouns for this review deck (only non-empty inflections will be tested in review mode). One specific example is the regional use of the pronoun vosotros in Spanish. In parts of Spain, this refers to the concept of "you all," whereas in most Latin American Spanish dialects, the ustedes form serves a purpose of both "they" and "you all," making this subject pronoun "vosotros" irrelevant there.</p>
+
+			<h3>See the source</h3>
+			<ul>
+				<li><a href="https://github.com/mhergenrader/languagesuite">View on github</a></li>
+			</ul>
+
+			</div>
+		</div>
+	</div>
+	
+	<hr>
+		
+	<footer>
+	<p>Copyright © 2015 Michael Hergenrader</p>
+	<small>Site powered by Bootstrap by Twitter</small>
+	</footer>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>	
+</body>
+</html>

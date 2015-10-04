@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Michael Hergenrader</title>
+	<meta name="description" content="Michael (Mike) Hergenrader is a Technical Program Manager for Google's Search Quality and Knowledge Graph capacity, with personal long-term research interests in neural model architectures and their applications to natural language tasks.">
+	<meta name="author" content="Michael Hergenrader">
+	<meta name="keywords" content="Michael Mike Hergenrader Computer Science USC ISI Speech Emotion Acts Publications Honors Thesis Spanish Portuguese Dialectology Naive Bayes SVM C4.5 Decision Trees Kappa ASEE">
+	
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<style>
+	footer {
+		text-align: center;
+	  }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+		<script src="../assets/js/html5shiv.js"></script>
+	<![endif]-->
+	
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			<a class="brand" href="index.html">Mike Hergenrader</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li><a href="index.html">About</a></li>
+					<li><a href="uploads/resume.pdf">Resume (PDF)</a></li>
+					<li class="active"><a href="#">Research</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="personal.html">Personal</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<h1>Prior Research Experience</h1>
+				
+				<ul>
+					<li><a href="#isi">Informational Sciences Institute</a></li>
+					<li><a href="#usc">USC Department of Spanish and Portuguese</a></li>
+				</ul>
+				
+				<hr>
+
+				<h2><a href="http://www.isi.edu/home" id="isi">Informational Sciences Institute (ISI)</a></h2>
+				
+				<p><em>Advisor: <a href="https://www.linkedin.com/pub/jihie-kim/5/674/27b">Dr. Jihie Kim</a></em></p>
+				
+				<h3>Summary</h3>
+
+				<p>From September 2010 to May 2012, under the REU program funded by NSF, I researched discourse and sentiment patterns in online course discussion boards, using discussion threads annotated with Speech and Emotion Acts. I wrote two published and presented papers (citations below) for the <a href="http://www.asee.org/">ASEE</a> Annual Conferences.</p>
+				
+				<p>In my first paper, I investigated the effects of different question-answer patterns (and who stated them) in the first two posts of a thread and how it correlated with factors like thread length and the number of unique students involved in the thread as whole.</p>
+				
+				<p>For this task, I split the thread data set into "undeveloped" (two posts) and "developed" (more than two posts) to compare whether the Q&amp;A patterns of the first two posts led to any further development of the thread. From my analysis, I found that "how to" questions and direct answers, in accordance with intuition, tended to be associated more often with undeveloped threads, limiting possible further discussion. On the other hand, when questions appeared in both posts, regardless of whether the same student posted both, the threads tended to be more developed. Overall, in this paper and in my research, I found that certain question and answer types were a reasonably good indicator of whether the thread would continue and whether more users would be involved.</p>
+				
+				<p>Finally, I studied the correlation between the role of the first responder (student or instructor) and the thread length. In my results, matching intuition, that when someone in an instructor role (e.g. professors or course assistants) answered directly with instructions, the threads tended to be undeveloped. When students responded in the second post, with either responses or questions, more engagement occurred, as seen in longer thread lengths and more users in the discussion.</p>
+				
+				<p>In my second paper, I looked at the correlation between the appearance of phrases denoting frustration and other variables. In particular, I observed the location of frustration in threads and whether this correlated with discussion length, poster diversity/count, and average first response times. I also then looked at whether frustration appearing in initial posts close to a project deadline affected these variables.</p>
+				
+				<p>To my surprise, the appearance of frustration in the initial post, and throughout the discussion, did not correlate with an increase in urgent responses or increased student involvement. This (lack of) trend was observed in general and when viewing threads close to a deadline. Also, no significant correlation was found between the length of posts (measured in number of tokens) that contained frustration and response times.</p>
+				
+				<p>In all of my research here, I labeled posts with <em>Speech Acts</em> and <em>Emotion Acts</em>, tagging frustration and question/answer types. To direct this labeling effort, I helped develop a manual that set out the criteria for each annotation type. To reduce bias from my own labeling decisions, I partnered with other students to come up with independent annotations on the same posts. I wrote a comparison tool implementing the <a href="https://en.wikipedia.org/wiki/Cohen%27s_kappa">Cohen's Kappa measure</a> to determine our level of agreement and discuss divergent cases, after which I added the agreed upon annotations to the data set.</p>
+				
+				<p>Outside of the correlation investigations above in my papers, I also started to look into whether the appearance of frustration and other factors would impact project and final grades. In addition, employing supervised classification algorithms like C4.5 decision trees, Naïve Bayes, and Support Vector Machines via WEKA API's, I started exploring tagging unlabeled posts and phrases with speech and emotion acts, leveraging our tagged data set for training data. While this research was more experimental than publication-ready, I gained valuable experience in applying classification algorithms.</p>
+
+				<h3>Publications</h3>
+				<p><strong>Michael Hergenrader</strong>, Jihie Kim, and Erin Shaw. "Stuck in the Middle: The Impact and Prevalence of Frustration in Online Question-Answer Discussion Threads". 2012 ASEE Annual Conference, San Antonio, Texas, 2012, June. ASEE Conferences, 2012.  <a href="https://peer.asee.org/21941">https://peer.asee.org/21941</a>. Internet.</p>
+
+				<p><strong>Michael Hergenrader</strong>, Joanna Drummond, and Jihie Kim. "First Impressions: The First Two Posts and their Influence on the Development of Online Question-Answer Discussion Threads". 2011 Annual Conference &amp; Exposition, Vancouver, BC, 2011, June. ASEE Conferences, 2011. <a href="https://peer.asee.org/17997">https://peer.asee.org/17997</a>. Internet.</p>
+
+				<hr>
+
+				<h2><a href="https://dornsife.usc.edu/spanish/" id="usc">USC Department of Spanish and Portuguese</a></h2>
+
+				<p><em>Advisor: <a href="https://dornsife.usc.edu/cf/faculty-and-staff/faculty.cfm?pid=1003668">Dr. Mario Saltarelli</a></em></p>
+
+				<h3>Summary</h3>
+
+				<p>From September 2011 to May 2012, I conducted research in the Department of Spanish and Portuguese (enrolled in SPAN-490x), presenting an <a href="https://dornsife.usc.edu/spanish/the-honors-program/">Honors Thesis</a> in the second semester, the first of a computational linguistics focus in the department. For my investigation, I looked at the <a href="https://en.wikipedia.org/wiki/Dialectology">dialectology</a> of Spanish and Portuguese via a corpus composed of canonical works, stories/essays written by anyone, and tweets from a variety of countries. Overall, I wanted to understand whether certain words and phrases in written works of different countries were particularly indicative of their associated dialect.</p>
+				
+				<p>To this end, leveraging my budding machine learning experience from ISI and IBM, I applied the multivariate (Bernoulli) Naïve Bayes algorithm to these documents represented as unigrams, bigrams, and trigrams. After scraping a multitude of sources and much preprocessing to generate better candidate N-grams, I used WEKA API's to apply a one-vs-rest Naïve Bayes classification on the N-grams to determine which were most/least characteristic of different countries and their associated dialects. Under the unigram model, there were certainly some expected results, like <em>gauchos</em> appearing more often in Argentine texts and exports like <em>cacao</em> in Ecuadorian ones. An interesting revelation was the spelling changes in the Peruvian dialect, in which <em>fortunato</em> and <em>callao</em> (with the <em>d</em> in the more standard participle <em>callado</em> dropped) received highly representative scores.</p>
+				
+				<p>There were certainly some challenges in the research for this paper. The bigram and trigram models did not produce as significant results as I expected. In addition, the relative lack of texts from some African countries, like Equatorial Guinea (Spanish) and Namibia (Portuguese), made reasoning about their representative phrases more difficult and less impactful. Finally, I believe I could have further improved the preprocessing to avoid capturing some collocations that still had a structure word in them. However, despite these challenges, I learned a great deal about multi-class classification, proper corpus building, scraping and preprocessing, and sentence tagging.</p>
+				
+				<p>Beyond my paper, I also, from my constructed Naïve Bayes model, ran prediction over test sets of texts to determine whether my classifier could correctly predict the dialect employed. Unfortunately, the simplicity of my classifier, relying on simple N-grams with no backoff, underfit quite a bit, revealing the needs for possible extensions like observing syntactical differences like word order and sentence length as well, in addition to trying more sophisticated classifiers. Another broader extension I'd like to pursue would be to classify dialects from spoken language materials.</p>
+
+				<h3>Honors Thesis</h3>
+				<p><strong>Michael Hergenrader</strong> and Mario Saltarelli. “La dialectología estadística de las lenguas ibéricas estudiada mediante los n-gramas”. (A Statistical Study of Iberian Language Dialectology via N-grams.) Honors Thesis. University of Southern California, 2012. <a href="uploads/tesis.pdf">http://mikehergenrader.com/uploads/tesis.pdf</a>. Internet.</p>
+		
+			</div>
+		</div>
+	</div>
+	
+	
+	<hr>
+	
+	
+	<footer>
+	<p>Copyright © 2015 Michael Hergenrader</p>
+	<small>Site powered by Bootstrap by Twitter</small>
+	</footer>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
