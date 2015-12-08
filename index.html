@@ -22,12 +22,27 @@
 	  .nolist {
 		list-style: none;
 	  }
+	  .highlights {
+		/*display: block;*/
+		/*padding-left: 15px;*/
+		padding-right: 15px;
+		/*margin: 0 auto;
+		max-width: 100%;*/
+	  }
 	  .about-list-header-nav {
 		font-weight: bold;
 	  }
 	  .navbar .brand {
 		color: #DDDDDD;
 	  }
+	  .phead {
+		margin-bottom: 0;
+		font-weight: bold;
+	  }
+	  #title {
+		margin-bottom: 0;
+	  }
+	
     </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 	
@@ -58,28 +73,20 @@
 			</div>
 		</div>
 	</div>
-	
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="span3">
 				<div class="well sidebar-nav">
 					<img class="profile" src="uploads/profile.jpg" alt="Mike Hergenrader">
-					<ul class="nolist">
-						<li>
-							<strong>Michael (Mike) Hergenrader</strong>
-							<br>
-							<em>ˈmaɪkəl (maɪk) ˈhərgɛnreɪdər</em>
-						</li>
-					</ul>
-					<ul class="nolist">
-						<li class="about-list-header-nav">Current Position</li>
-						<li>Technical Program Manager, Google</li>
-						<li><em>Search Quality, Knowledge Graph Capacity Planning</em></li>
-					</ul>
-					<ul class="nolist">
-						<li class="about-list-header-nav">Contact Me</li>						
-						<li>Please see my <a href="uploads/resume.pdf">resume</a>.</li>
-					</ul>
+					<div class="highlights">
+						<p class="phead">Michael (Mike) Hergenrader</p>
+						<p><em>ˈmaɪkəl (maɪk) ˈhərgɛnreɪdər</em></p>
+						<p class="phead">Current Position</p>
+						<p id="title">Technical Program Manager, Google</p>
+						<p><em>Search Quality, Knowledge Graph Capacity Planning</em></p>
+						<p class="phead">Contact Me</p>
+						<p>Please see my <a href="uploads/resume.pdf">resume</a>.</p>
+					</div>
 				</div>
 			</div>
 			<div class="span9">
@@ -93,32 +100,32 @@
 					<hr>
 
 					<h2><a id="goals">Goals</a></h2>
-					<p>I have always had an aptitude and fascination for the intricacies of human languages, studying English, Spanish, Portuguese, Chinese, German, Greek, Catalan, and Italian in depth at different points in my life. Coupled with this long-standing interest has been my fascination by the increasing ability of machine learning algorithms to capture understanding of languages and accomplish tasks like translation, reading, speech recognition, generation, dialogue parsing, question-answering, and more.</p>
+					<p>I have always had an aptitude and fascination for human languages, studying English, Spanish, Portuguese, Chinese, German, Greek, Catalan, and Italian in depth at different points in my life. Also piquing my interest has been the increasing ability of machine learning algorithms to help us better understand languages at scale and accomplish difficult high-level human tasks like translation, reading, speech recognition, generation, dialogue parsing, question-answering, and more.</p>
 					
-					<p>I want to understand in depth how machine learning methods can work so well with natural language tasks. I want to advance these methods to better our usage, understanding, and applications of language. <strong>To address these curiosities and goals, I want to pursue a long-term career in machine learning and natural language processing research</strong>.</p>
+					<p>I want to understand in depth how machine learning methods can work so well with natural language tasks. I want to advance these methods to better our usage, understanding, and applications of language.<strong> To address these curiosities and goals, I am working toward a long-term career in machine learning and natural language processing research</strong>.</p>
 					
-					<p>To this end, I am applying to Stanford's Master's in Computer Science program (through the <a href="https://web.stanford.edu/dept/registrar/bulletin1112/4832.htm">HCP</a> program), with a specialization in Artificial Intelligence, for the Autumn 2016 quarter. I believe Stanford's program will provide me with not only a deep, formalized background in machine learning and NLP (<a href="https://docs.google.com/spreadsheets/d/13IN1gbwUjA-o7iZiIOibrUrAP_KO9NQpujFXY6gndj8/edit#gid=0">my potential course plan</a> to this end) but also exposure to its groundbreaking research in these areas, research I want to delve into and contribute to as I look toward pursuing a Ph.D.					
+					<p>To this end, I am applying to Stanford's Master's in Computer Science program (through the <a href="https://web.stanford.edu/dept/registrar/bulletin1112/4832.htm">HCP</a> program), with a specialization in Artificial Intelligence, intending to enter in the Autumn 2016 quarter. I believe Stanford's program will provide me with not only a deep, formalized background in machine learning and NLP (<a href="https://docs.google.com/spreadsheets/d/13IN1gbwUjA-o7iZiIOibrUrAP_KO9NQpujFXY6gndj8/edit#gid=0">my potential course plan</a> to this end) but also exposure to its groundbreaking research in these areas, research I want to delve into and contribute to as I look toward pursuing a Ph.D.					
 					
 					<hr>
 					
 					<h2><a id="research-interests">Research Interests</a></h2>
 					
-					<p>My current interests are <strong>neural network</strong> and <strong>deep learning models</strong> leveraged for <strong>sequence learning tasks</strong> like <strong>Machine Reading, Machine Translation, and Automatic Speech Recognition</strong>. I’m awestruck by their inherent capacity to address classically difficult problems in language processing and understanding: variable length structures handled natively by Recurrent Neural Networks and LSTM's, sparsity handled by dense vectors through word embeddings, the automatic focus on relevant pieces of large inputs via attention mechanisms. And the capability of deep, hierarchical models to automatically learn new higher level features represents precisely the understanding of language inputs that excites me about this intersection between machine learning and natural language.</p>
+					<p>My current primary interest - among others - lies in <strong>neural and deep sequence models</strong> like recurrent and recursive neural networks. I’m awestruck by the their capacity to handle variable-length sequences of correlated inputs, structures inherent to natural languages, representing them in compact vector representations. In addition, the capability of deeper networks to discover useful higher-level sequence features in  exemplifies precisely why I am so fascinated by the intersection between machine learning and natural language.</p>
+						
+					<p>With the goal of improving sequence learning tasks like <strong>Machine Reading and Machine Translation</strong>, I want to research architectures and methods that address the vanishing gradient problem that occurs in training deep neural and sequence models, allowing models to better capture correlations between inputs separated by long distances. In particular, I aim to explore and develop variants of gating mechanisms, like Long Short-term Memory and Gated Recurrent Units; attention mechanisms; and newer external memory-based architectures like Memory Networks, of <a href="http://arxiv.org/abs/1410.3916">Weston et al., 2015</a>, and Neural Turing Machines, of <a href="http://arxiv.org/abs/1410.5401">Graves et al., 2014</a>.</p>
 					
-					<p>After Professor Chris Manning first sparked my interest in these models in <a href="http://web.stanford.edu/class/cs276/">CS 276</a>, I spent the summer of 2015 building up a good understanding of these model architectures. During this time, I took Geoffrey Hinton's Neural Networks course via Coursera, and though I was not able to officially join the Neural Networks pilot course offered by the Google Brain team, I completed it as well, following its materials on my own schedule. This autumn, taking <a href="http://web.stanford.edu/class/cs224n/">CS 224n</a> at Stanford, I aim to use my final project to conduct a deeper exploration into attention-based models and their applications to Machine Translation or Machine Reading.</p>
+					<p>After Professor Chris Manning first sparked my interest in these models in <a href="http://web.stanford.edu/class/cs276/">CS 276</a>, I spent the summer of 2015 building up a good understanding of the various model architectures and methods out there. During this time, I took Geoffrey Hinton's Neural Networks course via Coursera, and though I was not able to officially join the Neural Networks pilot course offered by the Google Brain team, I completed it as well, as a self-study. My most recent course, <a href="http://web.stanford.edu/class/cs224n/">CS 224n</a>, further solidified my interest in this space, exposing me to Stanford's groundbreaking contributions in this area.</p>
 					
-					<p>Longer term at Stanford, I want to contribute to the research and advancement of these groundbreaking model architectures, working in <a href="http://nlp.stanford.edu/">NLP group</a> and pursuing a Distinction in Research.</p>
+					<p>Longer term at Stanford, I want to contribute to the research and advancement of these groundbreaking model architectures, working in the <a href="http://nlp.stanford.edu/">NLP Group</a> and pursuing a Distinction in Research.</p>
 			
 				</div>
 			</div>
 		</div>
 	</div>
-	
 	<hr>
-		
 	<footer>
-	<p>Copyright © 2015 Michael Hergenrader</p>
-	<small>Site powered by Bootstrap by Twitter</small>
+		<p>Copyright © 2015 Michael Hergenrader</p>
+		<small>Site powered by Bootstrap by Twitter</small>
 	</footer>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
